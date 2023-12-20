@@ -1,6 +1,9 @@
 namespace BankTransfer.Models;
 
-public class Store(string fullName, string email, string CNPJ) : Account(fullName, email)
+public class Store : Account
 {
-    string CNPJ { get; set; } = CNPJ;
+    // Identifier -> CNPJ
+    public Store(string identifier, string fullName, string email) : base(identifier, fullName, email)
+    {
+    }
 }

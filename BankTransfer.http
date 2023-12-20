@@ -1,6 +1,19 @@
 @BankTransfer_HostAddress = http://localhost:5105
 
-GET {{BankTransfer_HostAddress}}/weatherforecast/
+GET {{BankTransfer_HostAddress}}/account/
 Accept: application/json
 
 ###
+
+POST {{BankTransfer_HostAddress}}/account/register
+Accept: application/json
+
+###
+
+POST {{BankTransfer_HostAddress}}/account/login
+Accept: application/json
+
+###
+
+POST {{BankTransfer_HostAddress}}/account/transfer
+Accept: application/json

@@ -2,10 +2,13 @@ using BankTransfer.Services;
 
 namespace BankTransfer.Models;
 
-public class User(string fullName, string email, string cpf) : Account(fullName, email)
+public class User : Account
 {
-    string CPF { get; set; } = cpf;
-    
+    // Identifier -> CPF
+    public User(string identifier, string fullName, string email) : base(identifier, fullName, email)
+    {
+    }
+
     public void SendMoney(double amount, Account account)
     {
         // Validations
